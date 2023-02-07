@@ -31,7 +31,7 @@ if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <?php wp_nav_menu(['theme_location'=> 'header',
+        <?php wp_nav_menu (['theme_location'=> 'header',
         'container' => false,
         'menu_class'=> 'navbar-nav me-auto', 
         ]) ?>
