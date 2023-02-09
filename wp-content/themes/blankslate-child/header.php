@@ -6,6 +6,7 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<a href="#"><img src="" alt="logo">
 <?php wp_body_open(); ?>
 <div id="wrapper" class="hfeed">
 <header id="header" role="banner">
@@ -33,6 +34,5 @@ if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1
   </div>
 </nav>
 </header>
-
 <div id="container">
 <main id="content" role="main">

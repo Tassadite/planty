@@ -17,8 +17,7 @@ License URI: https://www.gnu.org/licenses/gpl.html
 BlankSlate WordPress Theme © 2011-2023 TidyThemes
 BlankSlate is distributed under the terms of the GNU GPL
 */
-footer
-{
+footer{
     font-family: Syne;
     font-size: 16px;
     font-weight: 400;
@@ -30,3 +29,25 @@ footer
     width: 1440px;
     border-radius: 0px;
     background-color: #FFFFFF;}
+header{
+    font: sine;
+    color: #000000;
+}
+/*  logo PLANTY */
+
+position: absolute;
+left: 0%;
+right: 4.67%;
+top: 0.1%;
+bottom: 0.61%;
+background: #DC9F96;
+/* logo feuille Vector */
+
+position: absolute;
+left: 95.43%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #326238;
+
