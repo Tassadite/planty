@@ -6,12 +6,22 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<a href="#"><img src="" alt="logo">
 <?php wp_body_open(); ?>
 <div id="wrapper" class="hfeed">
 <header id="header" role="banner">
+
+<?php
+$custom_logo_id = get_theme_mod( 'custom_logo' );
+$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+if ( has_custom_logo() ) {
+        echo '<img src="' . esc_url( $logo[0]) . '" alt="' . get_bloginfo( 'name' ) . '">';
+} else {
+        echo '<h1>'. get_bloginfo( 'name' ) .'</h1>';
+}
+?>
 <div id="branding">
 <div id="site-title" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+
 <?php
 if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1>'; }
 echo '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" rel="home" itemprop="url"><span itemprop="name">' . esc_html( get_bloginfo( 'name' ) ) . '</span></a>';

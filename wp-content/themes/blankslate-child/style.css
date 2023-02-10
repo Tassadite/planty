@@ -34,20 +34,13 @@ header{
     color: #000000;
 }
 /*  logo PLANTY */
-
+.logo
+{
 position: absolute;
 left: 0%;
 right: 4.67%;
 top: 0.1%;
 bottom: 0.61%;
-background: #DC9F96;
-/* logo feuille Vector */
+background: #DC9F96;}
 
-position: absolute;
-left: 95.43%;
-right: 0%;
-top: 0%;
-bottom: 0%;
-
-background: #326238;
 
