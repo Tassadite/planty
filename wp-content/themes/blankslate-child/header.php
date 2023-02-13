@@ -12,27 +12,20 @@
 
 <?php
 $custom_logo_id = get_theme_mod( 'custom_logo' );
-$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-if ( has_custom_logo() ) {
-        echo '<img src="' . esc_url( $logo[0]) . '" alt="' . get_bloginfo( 'name' ) . '">';
-} else {
-        echo '<h1>'. get_bloginfo( 'name' ) .'</h1>';
-}
-?>
-<div id="branding">
-<div id="site-title" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );?>
 
 <?php
 if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1>'; }
-echo '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" rel="home" itemprop="url"><span itemprop="name">' . esc_html( get_bloginfo( 'name' ) ) . '</span></a>';
+if ( has_custom_logo() ) {
+  echo '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" rel="home" itemprop="url"><span itemprop="name"><img src="' . esc_url( $logo[0]) . '" alt="' . get_bloginfo( 'name' ) . '"></span></a>';
+} else {
+  echo '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" rel="home" itemprop="url"><span itemprop="name">' . esc_html( get_bloginfo( 'name' ) ) . '</span></a>';
+}
 if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; }
 ?>
-</div>
-<div id="site-description"<?php if ( !is_single() ) { echo ' itemprop="description"'; } ?>><?php bloginfo( 'description' ); ?></div>
-</div>
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <?php wp_nav_menu (
           array(
