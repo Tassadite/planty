@@ -18,8 +18,6 @@ function blankslate_child_supports()
 /*appel des menus*/
 add_action('after_setup_theme', 'blankslate_child_supports');
 
-/*appel du logo*/
-add_theme_support( 'custom-logo' );
- 
+
 
 ?>
