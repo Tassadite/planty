@@ -20,49 +20,60 @@ BlankSlate is distributed under the terms of the GNU GPL
 /*GENERAL*/
 :root {
     --main-color: white; /* var(--main-color) */
-    --second-color: #E5E5E5; /* var(--second-color) */
-    font-family: 'Syne', sans-serif;
+    --second-color:#ECE2DA ; /* var(--second-color) */
+    --third-color: #3B8E46; /* var(--third-color)*/
+      font-family: 'raleway'
+
     
    
   }
 
 footer{
   text-align:center;
+  color: black;
+  
+  
 
+}
+header{
+  display: flex;
+  justify-content: space-between;
+   
+   margin:0;
+  
 }
 
 .energy_drink{
+  position: relative;
   display: flex;
   justify-content: center;
-  z-index: 2;
+  z-index: 1;
 }
 
 .feuilledroite{
-position: absolute;
+position: relative;
 width: 349.19px;
 height: 400.08px;
-left: 660px;
-top: 580px;
-z-index: -1;/*gestion du positionnement : feuille mis en arrière plan */
+left: -300px;
+z-index: 0;/*gestion du positionnement : feuille mis en arrière plan */
 }
 
 .feuillegauche{
-  position: absolute;
+  position: relative;
   width: 349.19px;
   height: 400.08px;
   left: 350px;
-  top: 580px;
-  z-index: -1;
+  z-index: 0;
  } 
   
 #content{
 background-color: var(--second-color);
+max-width: 1440px;
  }
-.rectangle{
-  display: flex; 
-  justify-content: space-around;
-  
 
+.rectangle img{
+  width:1440px;
+  
 }
 .h2{
   color: #3B8E46;
